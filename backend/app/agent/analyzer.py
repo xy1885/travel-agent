@@ -9,7 +9,7 @@ chain = analyze_prompt | llm_with_structured
 
 def analyze_requirements(user_info: UserInfo) -> ClarificationResponse:
     """前置分析函数，用于分析用户的原始输入信息，检查是否有矛盾或者模糊描述"""
-    return chain.invoke(
+    return chain.ainvoke(
         {
             "user_info": user_info.model_dump_json(indent=2, exclude={"extra_info"}),
             "extra_info": user_info.extra_info,
