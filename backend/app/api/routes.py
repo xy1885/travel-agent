@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException, Request
 from app.schemas import UserInfo
 from app.agent import analyze_requirements, generate_plan, check_prompt_injection
-from main import limiter
+from app.limiter import limiter
 
 router = APIRouter()
 

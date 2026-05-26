@@ -147,7 +147,7 @@
 </template>
 
 <script setup>
-import { reactive, watch } from 'vue'
+import { reactive, watch, computed } from 'vue'
 import { useRouter } from 'vue-router'
 import { useTravelStore } from '../stores/travelStore'
 

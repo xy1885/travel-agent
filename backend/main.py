@@ -2,11 +2,10 @@ from fastapi import FastAPI, Request as FastAPIRequest
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from app.api.routes import router
-from slowapi import Limiter, _rate_limit_exceeded_handler
-from slowapi.util import get_remote_address
+from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 
-limiter = Limiter(key_func=get_remote_address)
+from app.limiter import limiter
 
 app = FastAPI(title="TravelAgent API")
 app.state.limiter = limiter

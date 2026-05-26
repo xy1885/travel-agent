@@ -115,7 +115,7 @@ travel-agent/
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/xy188/travel-agent.git
+git clone https://github.com/xy1885/travel-agent.git
 cd travel-agent
 ```
 
